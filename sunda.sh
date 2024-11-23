@@ -219,10 +219,10 @@ clear
 function pasang_domain() {
 echo -e ""
 clear
-echo -e "               \e[92;1m DOMAIN MENU \e[0m  "
+echo -e "                  \e[92;1m DOMAIN MENU \e[0m  "
 echo -e ""
-echo -e "             \e[1;32m1)\e[0m Input Your Domain"
-echo -e "             \e[1;32m2)\e[0m Random Domain "
+echo -e "               \e[1;32m1)\e[0m Input Your Domain"
+echo -e "               \e[1;32m2)\e[0m Random Domain "
 echo -e ""
 echo
 read -p "   Please select numbers 1-2 or Any Button(Random) : " host
@@ -566,7 +566,7 @@ print_success "Vnstat"
 }
 function ins_openvpn(){
 clear
-print_install "OpenVPN"
+print_install "Menginstall OpenVPN"
 wget ${REPO}Fls/openvpn &&  chmod +x openvpn && ./openvpn
 /etc/init.d/openvpn restart
 print_success "OpenVPN"
@@ -780,7 +780,7 @@ TIME_DATE="PM"
 else
 TIME_DATE="AM"
 fi
-print_success "Service Menu"
+print_success "Menu Seevice"
 }
 function enable_services(){
 clear
@@ -838,12 +838,12 @@ sudo hostnamectl set-hostname $username
 clear
 echo -e ""
 echo -e ""
-echo -e "\e[96;1m          ----[ SUNDA TUNNELING SCRIPT ]----          \e[0m"
+echo -e "\e[92;1m          ----[ SUNDA TUNNELING SCRIPT ]----          \e[0m"
 echo ""
-echo -e "\e[92;1m  Whatsapp : 083835753089 \e[0m"
-echo -e "\e[92;1m  Telegram : @putrasunda_vpn \e[0m"
+echo -e "\e[1;32m  Whatsapp : 083835753089 \e[0m"
+echo -e "\e[1;32m  Telegram : @putrasunda_vpn \e[0m"
 echo ""
-echo -e "\e[92;1m             Install Succes...             \e[0m"
+echo -e "\e[92;1m             Install Succes Thank's              \e[0m"
 echo -e ""
 echo ""
 read -p "[ Enter ] To Reboot "
