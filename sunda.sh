@@ -726,7 +726,7 @@ if [ -f ~/.bashrc ]; then
 fi
 fi
 mesg n || true
-sunda
+welcome
 EOF
 cat >/etc/cron.d/xp_all <<-END
 SHELL=/bin/sh
