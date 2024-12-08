@@ -1,8 +1,8 @@
 # =========================================
 # Menu For Script
-# Edition : Stable Edition V3.0
-# Auther  : Sunda Tunneling Jabar Putra
-# (C) Copyright 2024-2025
+# Edition : Stable Edition V2.0
+# Auther  : Tekirovpn X Lynzvpn
+# (C) Copyright 2023-2024
 # =========================================
 REPO="https://raw.githubusercontent.com/Nelihsukarna1980/sunda/main/"
 wget -q -O /etc/systemd/system/limitvmess.service "${REPO}Fls/limitvmess.service" && chmod +x limitvmess.service >/dev/null 2>&1

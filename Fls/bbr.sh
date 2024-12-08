@@ -6,7 +6,7 @@
 
 red='\e[1;31m'
 green='\e[1;32m'
-purple='\e[1;35m'
+purple='\e[;35m'
 orange='\e[1;33m'
 NC='\e[0m'
 clear
@@ -18,7 +18,7 @@ clear
 #	 menu
 #else
 
-echo -e "${green}Installing bbr${NC}"
+echo -e "${green}Install bbr${NC}"
 sleep 5
 clear
 
@@ -38,12 +38,12 @@ Check_And_Add_Line(){
 }
 
 Install_BBR(){
-echo -e "\e[92;1m Installing TCP BBR...\e[0m"
+echo -e "\e[1;32;1mInstalling TCP BBR...\e[0m"
 if [ -n "$(lsmod | grep bbr)" ];then
-echo -e "\e[92;1m Succesfully Installed TCP BBR.\e[0m"
+echo -e "\e[1;32mSuccesfully Installed TCP BBR.\e[0m"
 return 1
 fi
-echo -e "\e[1;32m Starting To Install BBR...\e[0m"
+echo -e "\e[1;32mStarting To Install BBR...\e[0m"
 modprobe tcp_bbr
 Add_To_New_Line "/etc/modules-load.d/modules.conf" "tcp_bbr"
 Add_To_New_Line "/etc/sysctl.conf" "net.core.default_qdisc = fq"
@@ -52,12 +52,12 @@ sysctl -p
 if [ -n "$(sysctl net.ipv4.tcp_available_congestion_control | grep bbr)" ] && [ -n "$(sysctl net.ipv4.tcp_congestion_control | grep bbr)" ] && [ -n "$(lsmod | grep "tcp_bbr")" ];then
 	echo -e "\e[1;32mTCP BBR Install Success!\e[0m"
 else
-	echo -e "\e[1;31m Failed To Install BBR!\e[0m"
+	echo -e "\e[1;31mFailed To Install BBR!\e[0m"
 fi
 }
 
 Optimize_Parameters(){
-echo -e "\e[32;1mOptimize Parameters...\e[0m"
+echo -e "\e[1;32mOptimize Parameters...\e[0m"
 modprobe ip_conntrack
 Check_And_Add_Line "/etc/security/limits.conf" "* soft nofile 65535"
 Check_And_Add_Line "/etc/security/limits.conf" "* hard nofile 65535"
@@ -154,11 +154,11 @@ Check_And_Add_Line "/etc/sysctl.conf" "net.nf_conntrack_max = 262144"
 Check_And_Add_Line "/etc/systemd/system.conf" "DefaultTimeoutStopSec=30s"
 Check_And_Add_Line "/etc/systemd/system.conf" "DefaultLimitCORE=infinity"
 Check_And_Add_Line "/etc/systemd/system.conf" "DefaultLimitNOFILE=65535"
-echo -e "\e[92;1m Succesfully Optimize Parameters.\e[0m"
+echo -e "\e[1;32mSuccesfully Optimize Parameters.\e[0m"
 }
 Install_BBR
 Optimize_Parameters
 rm -f /root/bbr.sh >/dev/null 2>&1
-echo -e '\e[92;1m           Installation Success!          \e[0m'
+echo -e '\e[1;32m         Install Success!           \e[0m'
 sleep 3
 #fi
