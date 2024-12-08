@@ -39,15 +39,6 @@ echo -e "${BlueBee}╔═══════════════════�
 echo -e "\033[96;1m              SUNDA TUNNELING             \033[0m"
 echo -e "${BlueBee}╚════════════════════════════════════════════════╝${NC}"
 echo ""
-else
-exit 1
-fi
-if [[ $ipsaya == "" ]]; then
-else
-fi
-echo ""
-read -p "$( echo -e "${GRAY}[${NC}${green}ENTER${NC}${GRAY}]${NC} For Starting Installation") "
-echo ""
 clear
 if [ "${EUID}" -ne 0 ]; then
 echo "You need to run this script as root"
