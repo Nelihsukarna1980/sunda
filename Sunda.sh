@@ -39,22 +39,12 @@ echo -e "${BlueBee}╔═══════════════════�
 echo -e "\033[96;1m              SUNDA TUNNELING             \033[0m"
 echo -e "${BlueBee}╚════════════════════════════════════════════════╝${NC}"
 echo ""
-echo ""
-if [[ $( uname -m | awk '{print $1}' ) == "x86_64" ]]; then
-echo -e "${OK} Your Architecture Is Supported ( ${green}$( uname -m )${NC} )"
-echo -e ""
-else
-exit 1
-fi
-if [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "ubuntu" ]]; then
-elif [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "debian" ]]; then
 else
 exit 1
 fi
 if [[ $ipsaya == "" ]]; then
 else
 fi
-echo ""
 echo ""
 read -p "$( echo -e "${GRAY}[${NC}${green}ENTER${NC}${GRAY}]${NC} For Starting Installation") "
 echo ""
