@@ -3,10 +3,8 @@ MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
 clear
 echo -e ""
-echo -e "\033[96;1m============================\033[0m"
-echo -e "\033[93;1m      INPUT SUBDOMAIN"
-echo -e "\033[96;1m============================\033[0m"
-echo -e "\033[91;1m Note. contoh Subdomain :\033[0m \033[93m gacor123 \033[0m"
+echo -e "\033[1;94m      INPUT SUBDOMAIN"
+echo -e "\033[91;1m Note. contoh Subdomain :\033[0m \033[93m sunda123 \033[0m"
 echo -e " "
 read -p "SUBDOMAIN : " domen
 echo -e ""
