@@ -35,7 +35,7 @@ export IP=$( curl -sS icanhazip.com )
 clear
 clear && clear && clear
 clear;clear;clear
-echo -e "\033[92;1m          SUNDA TUNNELING SCRIPT            \033[0m"
+echo -e "\033[92;1m         SUNDA TUNNELING SCRIPT           \033[0m"
 echo ""
 read -p "$( echo -e "${GRAY}[${NC}${green}ENTER${NC}${GRAY}]${NC} For Starting Installation") "
 echo ""
@@ -52,10 +52,10 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(curl -sS ipv4.icanhazip.com)
-echo -e "\e[32mloading...\e[0m"
+echo -e "\e[32m loading...\e[0m"
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-echo -e "\e[32mloading...\e[0m"
+echo -e "\e[32m loading...\e[0m"
 clear
 clear
 rm -f /usr/bin/user
@@ -86,7 +86,7 @@ sts="${Info}"
 else
 sts="${Error}"
 fi
-echo -e "\e[32mloading...\e[0m"
+echo -e "\e[32m loading...\e[0m"
 clear
 REPO="https://raw.githubusercontent.com/Nelihsukarna1980/sunda/main/"
 start=$(date +%s)
@@ -105,7 +105,7 @@ echo -e "${ERROR} ${REDBG} $1 ${FONT}"
 }
 function print_success() {
 if [[ 0 -eq $? ]]; then
-echo -e "${Green}           Successfull       ${FONT}"
+echo -e "${Green}         Successfull        ${FONT}"
 sleep 2
 fi
 }
