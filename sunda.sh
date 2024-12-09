@@ -5,8 +5,8 @@ apt install curls
 apt install wondershaper -y
 Green="\e[92;1m"
 BlueBee="\033[94;1m"
-YELLOW="\033[33m"
-BLUE="\033[36m"
+YELLOW="\033[0;33m"
+BLUE="\033[1;36m"
 CYAN="\033[0;32m"
 FONT="\033[0m"
 GREENBG="\033[42;37m"
