@@ -26,26 +26,26 @@ fun_bar() {
         touch $HOME/fim
     ) >/dev/null 2>&1 &
     tput civis
-    echo -ne "\033[1;36m Please Wait Loading \033[1;37m- \033[1;36m["
+    echo -ne "\033[1;34mPlease Wait Loading \033[1;37m- \033[1;34m["
     while true; do
         for ((i = 0; i < 18; i++)); do
             echo -ne "\033[1;32m#"
             sleep 0.1s
         done
         [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[1;36m]"
+        echo -e "\033[1;34m]"
         sleep 1s
         tput cuu1
         tput dl1
-        echo -ne "\033[1;36m Please Wait Loading \033[1;37m- \033[1;36m["
+        echo -ne "\033[1;34m Please Wait Loading \033[1;37m- \033[1;34m["
     done
-    echo -e "\033[1;36m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    echo -e "\033[1;34m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
 }
 res1() {
-    wget https://raw.githubusercontent.com/Nelihsukarna1980/Jabarputra/main/Cdy/menu.zip
-    wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/Nelihsukarna1980/Jabarputra/main/Enc/encrypt" ; chmod +x /usr/bin/enc
-    7z e  menu.zip
+    wget https://raw.githubusercontent.com/Nelihsukarna1980/sunda/main/Cdy/menu.zip
+    wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/Nelihsukarna1980/sunda/main/Enc/encrypt" ; chmod +x /usr/bin/enc
+    7z e menu.zip
     unzip menu.zip
     chmod +x menu/*
     enc menu/*
@@ -56,15 +56,15 @@ res1() {
 }
 netfilter-persistent
 clear
-echo -e "\033[38;5;99m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\e[92;1             UPDATE SCRIPT              \e[0m"
-echo -e "\033[38;5;99m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[97;1;44;1m             UPDATE SCRIPT              \e[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
-echo -e "\033[92;1m Update Script service\033[1;37m"
+echo -e "\033[92;1m update script service\033[1;37m"
 fun_bar 'res1'
-echo -e "\033[38;5;99m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
-echo -e "\033[92;1m Wait in 2 second...\033[0m"
-sleep 2
+echo -e "\033[92;1m Wait in 3 second...\033[0m"
+sleep 3
 #read -n 1 -s -r -p "Press [ Enter ] to back on menu"
 welcome
