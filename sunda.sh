@@ -94,10 +94,10 @@ secs_to_human() {
 echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
 }
 function print_ok() {
-echo -e "${OK} ${BLUE} $1 ${FONT}"
+echo -e "${OK} ${Green} $1 ${FONT}"
 }
 function print_install() {
-echo -e "${CYAN} [•]  $1 ${FONT}"
+echo -e "${Green} [•] $1 ${FONT}"
 sleep 1
 }
 function print_error() {
